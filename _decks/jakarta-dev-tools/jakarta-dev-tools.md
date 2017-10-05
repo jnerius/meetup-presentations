@@ -5,3 +5,11 @@ description: A presentation slide for how to use reveal.js in Jekyll
 theme: black
 transition: slide
 ---
+
+# This is heading 1
+
+## This is heading 2
+
+---
+
+Slide 2?
