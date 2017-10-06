@@ -24,8 +24,8 @@ Stuff
 
 # Fragments
 
- - Bullet 1 {% fragment %}
- - Bullet 2 {% fragment %}
+ - Bullet 1
+ - Bullet 2
 
 ---
 
