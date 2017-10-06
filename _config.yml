@@ -31,7 +31,6 @@ markdown_ext: ignoreme
 theme: minima
 plugins:
   - jekyll-feed
-  - fragment
 
 collections:
   decks:
