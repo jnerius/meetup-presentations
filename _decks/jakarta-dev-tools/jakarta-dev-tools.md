@@ -12,4 +12,21 @@ transition: slide
 
 ---
 
-Slide 2?
+# Slide 2?
+
+---
+
+## Slide 3
+
+Stuff
+
+---
+
+# Fragments
+
+ - Bullet 1 {% fragment %}
+ - Bullet 2 {% fragment %}
+
+---
+
+Slide 4...
