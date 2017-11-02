@@ -6,9 +6,9 @@ theme: black
 transition: slide
 ---
 
-# This is heading 1
+### Denver Developer Meetup
 
-## This is heading 2
+# IoT in ServiceNow
 
 ---
 
@@ -22,8 +22,9 @@ Stuff
 
 ---
 
-# Fragments
+# Fragments??
 
+ - Sadly not with GitHub's auto-build, but maybe with custom build
  - Bullet 1
  - Bullet 2
 

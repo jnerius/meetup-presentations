@@ -57,19 +57,33 @@
   
     <div class="reveal">
       <div class="slides">
-        <section data-markdown data-separator="^\n---\n$" data-vertical="^\n--\n$" data-notes="^Note:">
-            <script type="text/template">
+        <section data-markdown  
+                 data-separator="^---"  
+                 data-separator-vertical="^--"  
+                 data-separator-notes="^Note:"  
+                 data-charset="iso-8859-15">
+
+            <textarea data-template>
                 {{ content }}
-            </script>
+            </textarea>
         </section>
       </div>
     </div>
 
     <script src="{{ "/reveal.js/lib/js/head.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/reveal.js/js/reveal.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/reveal.js/plugin/markdown/marked.js" | prepend: site.baseurl }}"></script>script>
+
     <script>
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
+       
+      var renderer = new marked.Renderer();
+
+      renderer.listitem = function(text) {
+        return '<li class="fragment">' + text + '</li>'; 
+      }
+
       Reveal.initialize({
         controls: true,
         progress: true,
@@ -80,6 +94,11 @@
         {% else %}
           transition: 'slide', // none/fade/slide/convex/concave/zoom
         {% endif %}
+
+        markdown: {
+            renderer: renderer
+        }, 
+
         // Optional reveal.js plugins
         dependencies: [
           { src: '{{ "/reveal.js/lib/js/classList.js" | prepend: site.baseurl }}', condition: function() { return !document.body.classList; } },
