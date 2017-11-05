@@ -77,12 +77,14 @@
     <script>
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
-       
-      var renderer = new marked.Renderer();
+      
+      {% if page.fragments %} 
+        var renderer = new marked.Renderer();
 
-      renderer.listitem = function(text) {
-        return '<li class="fragment">' + text + '</li>'; 
-      }
+        renderer.listitem = function(text) {
+          return '<li class="fragment">' + text + '</li>'; 
+        }
+      {% endif %}
 
       Reveal.initialize({
         controls: true,
@@ -95,9 +97,11 @@
           transition: 'slide', // none/fade/slide/convex/concave/zoom
         {% endif %}
 
-        markdown: {
-            renderer: renderer
-        }, 
+        {% if page.fragments %} 
+            markdown: {
+                renderer: renderer
+            }, 
+        {% endif %}
 
         // Optional reveal.js plugins
         dependencies: [

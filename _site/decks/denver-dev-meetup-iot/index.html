@@ -60,7 +60,7 @@
             <textarea data-template>
                 ### Denver Developer Meetup
 
-# IoT in ServiceNow
+## IoT in ServiceNow
 
 ---
 
@@ -74,23 +74,77 @@ josh.nerius@servicenow.com
 
 ---
 
+# Background
+
+--
+
+![IoT Infographic](/meetup-presentations/assets/dev-meetup-iot/ppt_slide_1.png)
+
+---
+
 # The Device
 
---
-
-![Image of Device](/meetup-presentations/device.jpg)
-
--- 
-
-# NodeMCU
+- ESP8266 NodeMCU
+- Arduino-compatible
+- Wifi-enabled
 
 --
 
+![Image of Device](/meetup-presentations/assets/dev-meetup-iot/device.jpg)
 
+---
+
+# Data Flow
+
+--
+
+![Animation: Device to Master Instance](/meetup-presentations/assets/dev-meetup-iot/device_to_master.gif)
+
+--
+
+![Animation: Device to Wifi](/meetup-presentations/assets/dev-meetup-iot/device_to_wifi.gif)
+
+--
+
+![Animation: Device to Thinger to ServiceNow](/meetup-presentations/assets/dev-meetup-iot/device_to_thinger_to_servicenow.gif)
+
+--
+
+![Animation: ServiceNot to Thinger to Device](/meetup-presentations/assets/dev-meetup-iot/servicenow_to_thinger_to_device.gif)
+
+--
+
+![Animation: Device Full Flow](/meetup-presentations/assets/dev-meetup-iot/device_full_flow.gif)
 
 ---
 
 # Thinger.IO
+
+- IoT platform
+- Arduino libraries
+- Bi-directional communication
+- Handles the hard stuff
+- API endpoint per device
+
+--- 
+
+# Behind the Scenes
+
+-- 
+
+- Building 30+ devices takes a team
+- Acquiring hardware
+- Ordering obscure legos
+- Assembling bread boards
+
+-- 
+
+# Pictures!
+
+--
+
+![](/meetup-presentations/assets/dev-meetup-iot/
+
             </textarea>
         </section>
       </div>
@@ -103,12 +157,14 @@ josh.nerius@servicenow.com
     <script>
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
+      
        
-      var renderer = new marked.Renderer();
+        var renderer = new marked.Renderer();
 
-      renderer.listitem = function(text) {
-        return '<li class="fragment">' + text + '</li>'; 
-      }
+        renderer.listitem = function(text) {
+          return '<li class="fragment">' + text + '</li>'; 
+        }
+      
 
       Reveal.initialize({
         controls: true,
@@ -119,9 +175,11 @@ josh.nerius@servicenow.com
           transition: 'slide',
         
 
-        markdown: {
-            renderer: renderer
-        }, 
+         
+            markdown: {
+                renderer: renderer
+            }, 
+        
 
         // Optional reveal.js plugins
         dependencies: [
