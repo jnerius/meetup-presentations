@@ -123,7 +123,7 @@ And now, for a custom build process...
           { src: '/meetup-presentations/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: '/meetup-presentations/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: '/meetup-presentations/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '/meetup-presentations/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '/meetup-presentations/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: '/meetup-presentations/reveal.js/plugin/zoom-js/zoom.js', async: true },
           { src: '/meetup-presentations/reveal.js/plugin/notes/notes.js', async: true }
         ]
