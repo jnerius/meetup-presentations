@@ -72,7 +72,7 @@
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
     <p class="post-meta">
-      <time datetime="2017-09-28T17:42:25-05:00" itemprop="datePublished">
+      <time datetime="2017-09-28T15:42:25-07:00" itemprop="datePublished">
         
         Sep 28, 2017
       </time>
