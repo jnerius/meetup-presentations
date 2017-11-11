@@ -1,6 +1,6 @@
 ---
 layout: slide
-title: Denver Developer Meetup - November 2017
+title: Seattle Developer Meetup - November 2017
 description: A presentation slide for how to use reveal.js in Jekyll
 theme: black
 transition: slide
